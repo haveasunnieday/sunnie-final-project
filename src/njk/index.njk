@@ -7,11 +7,11 @@
 <div class="container">
   <div class="row">
     <div class="col">
-    <h1>About the band</h1>
-    <p class="author">By {% for author in authors %}
-      <a href="{{ author.link }}" target="_blank">{{ author.name }}</a>{% if not loop.last %}{% if loop.revindex0 == 1 %} and {% else %}, {% endif %}{% endif %} {% endfor %}
-      <br> Published {{ publish_date }}
-    </p>
+      <h1>About the band</h1>
+      <p class="author">By {% for author in authors %}
+        <a href="{{ author.link }}" target="_blank">{{ author.name }}</a>{% if not loop.last %}{% if loop.revindex0 == 1 %} and {% else %}, {% endif %}{% endif %} {% endfor %}
+        <br> Published {{ publish_date }}
+      </p>
     </div>
   </div>
   <div class="row">
@@ -29,4 +29,50 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <section>
+    <div class="row">
+      <div class="col-sm-12 col-lg-3">
+        <div class="card mb-4" style="max-width: 12rem; img-fluid">
+          <img class="card-img-top" src="./img/members/brian-may-bw.jpg" alt="Card image cap">
+          <div class="card-body text-center">
+            <h5 class="card-title">Blackbeard</h5>
+            <p class="card-text">Edward Teach was an English pirate who operated around the West Indies.</p>
+            <a href="https://en.wikipedia.org/wiki/Blackbeard" class="card-link">Teach tidbits</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card mb-4">
+        <img class="card-img-top" src="./img/members/brian-may-bw.jpg">
+          <div class="card-body text-center">
+            <h5 class="card-title">Henry Morgan</h5>
+            <p class="card-text">A Welsh privateer, landowner and Lieutenant Governor of Jamaica.</p>
+            <a href="https://en.wikipedia.org/wiki/Henry_Morgan" class="card-link">S'more Sir Henry</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card mb-4">
+          <div class="card-body text-center">
+            <h5 class="card-title">Anne Bonny</h5>
+            <p class="card-text">An Irish pirate operating in the Caribbean in the early 1700s.</p>
+            <a href="https://en.wikipedia.org/wiki/Anne_Bonny" class="card-link">Bonny bounty</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-3">
+        <div class="card mb-4">
+          <div class="card-body text-center">
+            <h5 class="card-title">Blackbeard</h5>
+            <p class="card-text">Edward Teach was an English pirate who operated around the West Indies.</p>
+            <a href="https://en.wikipedia.org/wiki/Blackbeard" class="card-link">Teach tidbits</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 {% endblock %}
