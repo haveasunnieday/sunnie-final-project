@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <ul class="list-unstyled" style="display:inline-block;vertical-align:middle;"> 
+        {% for discs in data.discography %}
+        <li class="media">
+          <img class="mr-3" src="../img/discs/{{discs.image}}" alt="Album cover">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">{{discs.title}}</h5> {{discs.year}}
+          </div>
+        </li>
+        {% else %}
+          <li>Click <a href="https://en.wikipedia.org/wiki/Queen_discography">here</a> for a list of Queen's albums.</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
