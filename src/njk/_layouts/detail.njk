@@ -3,11 +3,41 @@
 {% block content %}
 <article class="container">
   <div class="row">
-    <div class="col-sm-4 left-rail">
-      {% block info %}{% endblock %}
+    <div class="photo col-12 offset-sm-2 col-sm-8 offset-md-0 col-md-5 left-rail">
+      {% block info %}
+        <img src="./img/members/{{member.image}}" alt="{{member.name}}" class="img-fluid">
+      {% endblock %}
+      <br>
+      <br>
     </div>
-    <div class="col-sm-8">
-      {% block story %}{% endblock %}
+
+    <div class="text col-12 col-md-7">
+      {% block story %}
+        <h2 class="detail-title">{{member.name}}</h2>
+
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="row">Instruments:</th>
+              <td>{{member.instruments}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Tenure:</th>
+              <td>{{member.tenure}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Birthplace:</th>
+              <td>{{member.birthplace}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Birthdate:</th>
+              <td>{{member.birthdate}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        {{member.text | safe}}
+      {% endblock %}
 
     </div>
   </div>

@@ -1,0 +1,22 @@
+.detail-title {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+}
+
+.table {
+  text-align: center;
+  color: white;
+}
+
+.photo {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
